@@ -1,24 +1,15 @@
-// import { Button } from './components';
+import { DefaultBtn } from './../index';
+import { Header } from './../index';
+import { Footer } from './../index';
 import './../../App.css';
+// import { Header } from './../index';
 function MyPage() {
     return (
-        <div className="App">
-            <header className="App-header">
-            
-                <p>
-                    MyPage
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            
-            </header>
-        </div>
+        <>
+            <Header title="MyPage"/>
+            <DefaultBtn url="/"　text="Homeへ"/>
+            <Footer />
+        </>
     );
 }
 

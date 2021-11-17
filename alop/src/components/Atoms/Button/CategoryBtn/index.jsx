@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 import './index.scss'
 
-function Button() {
+function CategoryBtn() {
     return(
         <>
-            <Link to="/MyPage" className="btn">test</Link>
+            <button>CategoryBtn</button>
         </>
     )
 }
 
-export default Button;
+export default CategoryBtn;
