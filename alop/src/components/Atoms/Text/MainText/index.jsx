@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import './index.scss'
 
-function Logo() {
+function MainText(props) {
     return(
         <>
-            <Link to="/MyPage" className="logo">Logo</Link>
+            <p>
+                {props.isText}
+            </p>
         </>
     )
 }
 
-export default Logo;
+export default MainText;

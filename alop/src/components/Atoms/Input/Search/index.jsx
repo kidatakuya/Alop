@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import './index.scss'
 
-function Search() {
+function Search(props) {
     return(
         <>
-            <input className="Search" type="text" />
+            <input name={props.isNames} type={props.isType} className={props.isClassName} placeholder={props.isPlaceholder} />
         </>
     )
 }

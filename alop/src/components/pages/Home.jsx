@@ -1,12 +1,11 @@
-import { DefaultBtn, Header, Footer } from './../index';
+import { Header, Footer, HomeMain } from './../index';
 import './../../App.css';
 
 function HomePage() {
     return (
         <>
             <Header title="Home"/>
-            <DefaultBtn url="MyPage" text="MyPageへ"/>
-            
+            <HomeMain />
             <Footer />
         </>
     );

@@ -6,13 +6,16 @@ export { default as CategoryBtn } from './Atoms/Button/CategoryBtn'
 export { default as SearchBtn } from './Atoms/Button/SearchBtn'
 // - img
 export { default as Logo } from './Atoms/Img/Logo'
+export { default as Thumbnail } from './Atoms/Img/Thumbnail'
 // - text
 export { default as Title } from './Atoms/Text/Title'
+export { default as MainText } from './Atoms/Text/MainText'
 // - input
 export { default as Search } from './Atoms/Input/Search'
 
 // Molecules
 export { default as SearchArea } from './Molecules/SearchArea'
+export { default as ItemCard } from './Molecules/Card/ItemCard'
 
 // Organisms
 export { default as Header } from './Organisms/Header'

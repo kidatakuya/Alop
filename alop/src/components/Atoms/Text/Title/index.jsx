@@ -5,7 +5,7 @@ import './index.scss'
 function Title(props) {
     return(
         <h1>
-            {props.title}
+            {props.isTitle}
         </h1>
     )
 }
