@@ -10,6 +10,7 @@ export { default as Thumbnail } from './Atoms/Img/Thumbnail'
 // - text
 export { default as Title } from './Atoms/Text/Title'
 export { default as MainText } from './Atoms/Text/MainText'
+export { default as ItemTitle } from './Atoms/Text/ItemTitle'
 // - input
 export { default as Search } from './Atoms/Input/Search'
 
@@ -20,6 +21,7 @@ export { default as ItemCard } from './Molecules/Card/ItemCard'
 // Organisms
 export { default as Header } from './Organisms/Header'
 export { default as Footer } from './Organisms/Footer'
+export { default as ItemListArea } from './Organisms/ItemListArea'
 
 // pages
 export { default as HomePage } from './Pages/Home'

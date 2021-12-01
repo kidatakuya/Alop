@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 
+
 import './index.scss'
 
-function Logo() {
+function Logo(props) {
     return(
-        <>
-            <Link to="/MyPage" className="logo">Logo</Link>
-        </>
+        <Link to="/" className="logo">
+            <img src={props.isUrl} alt={props.isAlt} />
+        </Link>
+    
     )
 }
 

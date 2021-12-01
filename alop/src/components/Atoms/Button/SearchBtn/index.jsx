@@ -1,11 +1,13 @@
 // import { Link } from "react-router-dom";
-
+// import SearchIcon from '../../../../assets/images/'
 import './index.scss'
 
-function SearchBtn() {
+function SearchBtn(props) {
     return(
         <>
-            <button className="SearchBtn">送信</button>
+            <button className="SearchBtn">
+                <img src={props.isUrl} alt="サーチ" />
+            </button>
         </>
     )
 }

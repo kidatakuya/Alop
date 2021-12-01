@@ -1,10 +1,13 @@
 import { Header, Footer, HomeMain } from './../index';
-import './../../App.css';
+import LogoUrl from "../../assets/images/logo.svg"
+import SearchIconUrl from "../../assets/images/search-icon.svg"
+
+// import './../../App.css';
 
 function HomePage() {
     return (
         <>
-            <Header title="Home"/>
+            <Header isTitle={"Home"} isLogo={LogoUrl} isSearchIcon={SearchIconUrl} />
             <HomeMain />
             <Footer />
         </>

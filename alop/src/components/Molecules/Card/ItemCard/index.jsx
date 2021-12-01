@@ -1,14 +1,14 @@
-// import { Link } from "react-router-dom";
-import { MainText, Title, Thumbnail } from './../../../index';
+
+import { MainText, ItemTitle, Thumbnail } from './../../../index';
 
 import './index.scss'
 
 function ItemCard(props) {
     return(
         <div className={props.isClassName}>
-            <Thumbnail isUrl="" isAlt="aaa"/>
-            <Title isTitle="Title" />
-            <MainText isText="aaaa" />
+            <Thumbnail isUrl={""} isAlt={"testtetst"}/>
+            <ItemTitle isTitle={props.isTitle} />
+            <MainText isText={props.isText} />
         </div>
     )
 }

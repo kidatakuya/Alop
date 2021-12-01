@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import './index.scss'
 
 function Thumbnail(props) {
     return(
         <>
-            <img src={props.isUrl} alt={props.isAlt} />
+            <img className="thumbnail" src={props.isUrl} alt={props.isAlt} />
         </>
     )
 }
