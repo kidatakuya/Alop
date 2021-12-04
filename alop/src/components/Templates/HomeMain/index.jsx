@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import { SearchArea, ItemListArea, DefaultBtn } from './../../index';
+import { ItemListArea, DefaultBtn } from './../../index';
 import './index.scss'
 
 function HomeMain() {

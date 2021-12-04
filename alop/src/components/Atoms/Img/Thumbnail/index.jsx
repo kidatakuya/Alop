@@ -5,7 +5,7 @@ import './index.scss'
 function Thumbnail(props) {
     return(
         <>
-            <img className="thumbnail" src={props.isUrl} alt={props.isAlt} />
+            <img className="thumbnail" src={props.isUrl} alt={props.isAlt} loading="lazy" />
         </>
     )
 }

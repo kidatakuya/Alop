@@ -5,7 +5,7 @@ import './index.scss'
 function ItemTitle(props) {
     return(
         <>
-            <h3>
+            <h3 className={props.isClass}>
                 {props.isTitle}
             </h3>
         </>
