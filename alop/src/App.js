@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
-import { HomePage , MyPage } from './components';
+import { HomePage , CourseDetail } from './components';
+import './ress.scss'
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/MyPage/:courseId" element={<MyPage />} />
+        <Route path="/CourseDetail/:courseId" element={<CourseDetail />} />
       </Routes>
       
     </>

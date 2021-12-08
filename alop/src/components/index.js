@@ -22,6 +22,8 @@ export { default as Search } from './Atoms/Input/Search'
 export { default as SearchArea } from './Molecules/SearchArea'
 export { default as ItemCard } from './Molecules/Card/ItemCard'
 export { default as CategoryWarp } from './Molecules/CategoryWarp'
+export { default as HeaderNav } from './Molecules/HeaderNav'
+
 
 // Organisms
 export { default as Header } from './Organisms/Header'
@@ -30,9 +32,9 @@ export { default as ItemListArea } from './Organisms/ItemListArea'
 
 // pages
 export { default as HomePage } from './Pages/Home'
-export { default as MyPage } from './Pages/MyPage'
+export { default as CourseDetail } from './Pages/CourseDetail'
 
 // templates
 export { default as HomeMain } from './Templates/HomeMain'
-export { default as MyPageMain } from './Templates/MyPageMain'
+export { default as CourseDetailMain } from './Templates/CourseDetailMain'
 

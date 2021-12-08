@@ -10,7 +10,7 @@ import './index.scss'
 function ItemCard(props) {
     const navigate = useNavigate();
     return(
-        <div onClick={() => {navigate(`MyPage/${props.isId}`)}} className={props.isClassName}>
+        <div onClick={() => {navigate(`CourseDetail/${props.isId}`)}} className={props.isClassName}>
             <Thumbnail isUrl={props.isUrl} isAlt={props.isAlt}/>
             <CategoryWarp isClass={props.isClass} isCategory={props.isCategory} />
             <ItemTitle isTitle={props.isTitle} isClass={"itemTitle"} />

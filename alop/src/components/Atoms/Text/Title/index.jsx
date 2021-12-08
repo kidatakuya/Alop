@@ -4,9 +4,9 @@ import './index.scss'
 
 function Title(props) {
     return(
-        <h1>
+        <h2 className={props.isClassName}>
             {props.isTitle}
-        </h1>
+        </h2>
     )
 }
 

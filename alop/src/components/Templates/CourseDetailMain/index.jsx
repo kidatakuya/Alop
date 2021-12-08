@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.scss'
 
-function MyPageMain(props) {
+function CourseDetailMain(props) {
     let { courseId } = useParams();
-    // const id = courseId - 1
+    const id = courseId - 1
     const [detail, setDetail] = useState([]);
     useEffect(()=>{
         const getState = () =>{
-            axios.get(`http://localhost/Alop/testAPI/itemDetail.php/?courseId=${courseId-1}`)
+            axios.get(`http://localhost/Alop/testAPI/itemDetail.php/?courseId=${id}`)
             .then(res => {
                 const data = res.data;
                 setDetail(data);
@@ -29,4 +29,4 @@ function MyPageMain(props) {
     )
 }
 
-export default MyPageMain;
+export default CourseDetailMain;

@@ -1,0 +1,25 @@
+
+.headerNav{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        li{
+            flex-basis: 40px;
+            .iconWarp{
+                display: inline-block;
+                width: calc(100% - 16px);
+                height: calc(100% - 16px);
+                padding: 8px;
+            }
+        }
+    }
+}
+
+
