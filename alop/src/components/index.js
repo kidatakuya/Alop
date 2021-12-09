@@ -4,6 +4,7 @@
 export { default as DefaultBtn } from './Atoms/Button/DefaultBtn'
 export { default as CategoryBtn } from './Atoms/Button/CategoryBtn'
 export { default as SearchBtn } from './Atoms/Button/SearchBtn'
+export { default as IconBtn } from './Atoms/Button/IconBtn'
 // - category
 export { default as CategoryLabel } from './Atoms/CategoryLabel'
 // - img
@@ -23,6 +24,7 @@ export { default as SearchArea } from './Molecules/SearchArea'
 export { default as ItemCard } from './Molecules/Card/ItemCard'
 export { default as CategoryWarp } from './Molecules/CategoryWarp'
 export { default as HeaderNav } from './Molecules/HeaderNav'
+export { default as ImageWarp } from './Molecules/ImageWarp'
 
 
 // Organisms
@@ -33,6 +35,7 @@ export { default as ItemListArea } from './Organisms/ItemListArea'
 // pages
 export { default as HomePage } from './Pages/Home'
 export { default as CourseDetail } from './Pages/CourseDetail'
+export { default as ErrorPage } from './Pages/ErrorPage'
 
 // templates
 export { default as HomeMain } from './Templates/HomeMain'
