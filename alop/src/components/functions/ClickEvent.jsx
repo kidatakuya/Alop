@@ -1,10 +1,10 @@
 
-export const IconAnimation = ( e, className ) => {
-    e.stopPropagation()
-    if(e.currentTarget.classList.contains(className)){
-        e.currentTarget.classList.remove(className)
+export const IconAnimation = ( event, className ) => {
+    event.stopPropagation()
+    if(event.currentTarget.classList.contains(className)){
+        event.currentTarget.classList.remove(className)
     }else{
-        e.currentTarget.classList.add(className)
+        event.currentTarget.classList.add(className)
     }
     
     // console.log(e.currentTarget)
