@@ -2,10 +2,10 @@
 
 import './index.scss'
 
-function CategoryBtn() {
+function CategoryBtn(props) {
     return(
         <>
-            <button>CategoryBtn</button>
+            <button className={props.isClassName}>{props.isText}</button>
         </>
     )
 }

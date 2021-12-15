@@ -5,12 +5,12 @@
     }
     80%{
         stroke-width: 3px;
-        stroke:pink;
-        fill: pink;
+        stroke:#fff;
+        fill: #fff;
     }
     100%{
         stroke-width: 0px;
-        fill: pink;
+        fill: #fff;
     }
 }
 
@@ -35,9 +35,14 @@
     }
 }
 
+// .iconAnimation{
+//     background-color: #B21B55;
+// }
+
 
 
 .iconAnimation{
+    background-color: #B21B55;
     svg{
         path{
             animation: iconAnimation 0.1s forwards 1;

@@ -25,12 +25,15 @@ export { default as ItemCard } from './Molecules/Card/ItemCard'
 export { default as CategoryWarp } from './Molecules/CategoryWarp'
 export { default as HeaderNav } from './Molecules/HeaderNav'
 export { default as ImageWarp } from './Molecules/ImageWarp'
+export { default as SearchContent } from './Molecules/SearchContent'
+export { default as CategoryItemList } from './Molecules/CategoryItemList'
 
 
 // Organisms
 export { default as Header } from './Organisms/Header'
 export { default as Footer } from './Organisms/Footer'
 export { default as ItemListArea } from './Organisms/ItemListArea'
+
 
 // pages
 export { default as HomePage } from './Pages/Home'

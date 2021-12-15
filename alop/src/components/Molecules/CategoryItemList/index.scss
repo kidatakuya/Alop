@@ -1,0 +1,20 @@
+.listsContent{
+    position: relative;
+    z-index: 100;
+    .categoryLists{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        &__item{
+            width: 224px;
+            padding: 13px 16px;
+            background-color: #fff;
+            transition: .1s;
+            &:hover{
+                background-color: #B21B55;
+                color: #fff;
+            }
+        }
+    }
+}
