@@ -7,7 +7,7 @@ function CourseDetail(props) {
     return (
         <>
             <Header isTitle={"MyPage"} isLogo={LogoUrl} isSearchIcon={SearchIconUrl} />
-            <DefaultBtn url="/"　text="Homeへ"/>
+            <DefaultBtn url="/" text="Homeへ"/>
             <h1>{courseId}</h1>
             <CourseDetailMain isId={props.isId} />
             <Footer />
