@@ -15,6 +15,16 @@ function CategoryItemList(props){
     useEffect(()=>{
         const listsContent = document.getElementsByClassName(props.isHoverElementsName);
         hoverEventFunction(listsContent, setIsShown, props.isText, Lists);
+        
+        if(isShown){
+            let categoryLists = document.getElementsByClassName("categoryLists__item");
+            for(let i=0;i<=Lists.length-1;i++){
+                if( Lists[i].choiceFlag ){
+                    categoryLists[i].classList.add("choice")
+                }
+            }
+            
+        }
 
     },[isShown])
     

@@ -46,5 +46,22 @@
         }
         
     }
+    .choice{
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 24px;
+            margin: auto;
+            background: center no-repeat;
+            background-image: url(../../../assets/images/checkmark-icon.svg);
+            
+        }
+    }
 }
 

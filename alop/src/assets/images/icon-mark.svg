@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159.143" height="106.721" viewBox="0 0 159.143 106.721">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.335" y1="0.5" x2="0.674" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.004"/>
+      <stop offset="1" stop-color="#2e2a29"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ_414" data-name="グループ 414" transform="translate(-0.414 0)">
+    <path id="パス_29" data-name="パス 29" d="M265.322,417.362l24.367.012V319.281H248.48L130.547,417.494l32.524-.12,56.5-46.658Z" transform="translate(-130.133 -319.281)" fill="url(#linear-gradient)"/>
+    <path id="パス_30" data-name="パス 30" d="M156.754,417.494l122.929-98.213h23.11L181.159,417.494Z" transform="translate(-143.237 -319.281)" fill="#a30a1a"/>
+    <path id="パス_31" data-name="パス 31" d="M292.6,420.551l-48.915-.248a4.459,4.459,0,0,0-4.484,4.459h0A15.24,15.24,0,0,0,254.272,440l15.019.123,8.514,6.623a41.151,41.151,0,0,0,35.967,21.138h30.244V420.727Z" transform="translate(-184.459 -361.166)" fill="#262423"/>
+    <path id="パス_32" data-name="パス 32" d="M347.274,382.263l-.263,19.366-23.738-.062Z" transform="translate(-226.498 -346.438)" fill="#555"/>
+  </g>
+</svg>

@@ -1,6 +1,35 @@
 
 .footer{
     border: 1px solid #000;  
+    background-color: #3C3C3C;
+    padding: 40px 0 41px;
+    color: #fff;
+    &__logoWarp{
+        text-align: center;
+    }
+    &__navWarp{
+        width: 70%;
+        margin: 26px auto 36px;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 150px;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    color: #fff;
+                }
+                
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+    }
+
 }
 
 
