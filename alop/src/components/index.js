@@ -18,6 +18,8 @@ export { default as Author } from './Atoms/Text/Author'
 export { default as Price } from './Atoms/Text/Price'
 // - input
 export { default as Search } from './Atoms/Input/Search'
+// - time
+export { default as Time } from './Atoms/Time'
 
 // Molecules
 export { default as SearchArea } from './Molecules/SearchArea'

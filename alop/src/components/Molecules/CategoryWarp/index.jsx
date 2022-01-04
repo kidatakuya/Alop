@@ -6,11 +6,10 @@ import './index.scss'
 function CategoryWarp(props) {
     return(
        
-        <div className="CategoryWarp">
-            <CategoryLabel isText={props.isClass} isClassName={"categoryLabel class"}/>
-            <CategoryLabel isText={props.isCategory} isClassName={"categoryLabel category"} />
+        <div className={props.isClassNameWarp}>
+            <CategoryLabel isText={props.isCategory} isClassName={props.isClassNameCategory} />
+            <CategoryLabel isText={props.isClass} isClassName={props.isClassNameClass}/>
         </div>
-        
     )
 }
 

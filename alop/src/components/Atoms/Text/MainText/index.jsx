@@ -5,7 +5,7 @@ import './index.scss'
 function MainText(props) {
     return(
         <>
-            <p>
+            <p className={props.isClassName}>
                 {props.isText}
             </p>
         </>
