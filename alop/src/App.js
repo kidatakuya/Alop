@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { HomePage , CourseDetail, ErrorPage } from './components';
+import { HomePage , CourseDetail, ErrorPage, CourseList } from './components';
 import './ress.scss'
 import './App.css';
 import { useEffect } from "react";
@@ -16,7 +16,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/CourseDetail/:courseId" element={<CourseDetail />} />
+        <Route path="/CourseDetail/id=:courseId" element={<CourseDetail />} />
+        <Route path="/CourseList/category=:categoryId" element={<CourseList />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       

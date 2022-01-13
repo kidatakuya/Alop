@@ -1,8 +1,55 @@
-.myPageMain{
-    padding: 0 100px;
+.courseDetailMain{
+    position: relative;
+    .detailtCard{
+        position: fixed;
+        top: 168px;
+        right: 100px;
+        z-index: 100;
+        width: 364px;
+        border-radius: 6px;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.16);
+        background-color: #fff;
+        .informationTextWarp{
+            padding: 16px;
+            .itemTitle{
+                padding: 0;
+                color: #555555;
+            }
+        }
+
+    }
+    
+    .courseContentsWarp{
+        color: #fff;
+        background-color: #2C2C2C;
+        padding: 0 100px;
+
+    }
     .courseContents{
         width: calc(100% - 437px);
+        
+    }
+    .firstContents{
         height: 400px;
+        padding: 56px 0;
+        .innerAuthorTimeWarp{
+            display: flex;
+        }
+        
+
+    }
+    .othersContents{
+        padding: 60px 100px;
+        .title{
+            color: #B21B55;
+            font-size: 26px;
+            border-bottom: solid 1px #D9D9D9;
+            margin-bottom: 32px;
+        }
+        .detailtText{
+            font-size: 18px;
+            color: #2C2C2C;
+        }
     }
 }
 

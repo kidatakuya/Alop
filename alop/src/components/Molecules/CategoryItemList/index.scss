@@ -1,6 +1,6 @@
 .listsContent{
     position: relative;
-    z-index: 100;
+    z-index: 200;
     background-color: #fff;
     .categoryBtn{
         background-color: #B21B55;
@@ -12,6 +12,7 @@
     }
     .categoryWarp{
         .item{
+            
             &:hover{
                 background-color: rgba($color: #B21B55, $alpha: 0.7);
                 color: #fff;
@@ -35,8 +36,11 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 200;
         transform: translateY(100%);
         &__item{
+            position: relative;
+            z-index: 200;
             width: 224px;
             padding: 13px 16px;
             background-color: #fff;

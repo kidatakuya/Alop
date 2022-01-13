@@ -41,6 +41,7 @@ export { default as ItemListArea } from './Organisms/ItemListArea'
 // pages
 export { default as HomePage } from './Pages/Home'
 export { default as CourseDetail } from './Pages/CourseDetail'
+export { default as CourseList } from './Pages/CourseList'
 export { default as ErrorPage } from './Pages/ErrorPage'
 
 // templates

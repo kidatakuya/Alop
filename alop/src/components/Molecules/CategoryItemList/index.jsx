@@ -1,42 +1,58 @@
-import { useState, createContext, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom'
 import { hoverEventFunction } from '../../Functions/HoverEvent'
 import { CategoryBtn } from '../../index';
 
 import './index.scss'
 
-export const FlagsContext = createContext(false);
+// export const FlagsContext = createContext(false);
 
 function CategoryItemList(props){
-    
-    
-    const [Lists, setLists] = useState(props.isLists)
+    const navigate = useNavigate();
+    let { categoryId } = useParams();
+    const [isLists, setIsLists] = useState(props.isLists)
     const [isShown, setIsShown] = useState(false);
+
+    const SearchNavigateFunction = (pash, index, isLists, StateFunction) => {
+        let categoryLists = document.getElementsByClassName("categoryLists__item");
+        let navList = isLists
+        for(let i=0;i<=navList.length-1;i++){
+            if(navList[i].choiceFlag){
+                navList[i].choiceFlag = false
+                categoryLists[i].classList.remove("choice")
+            }
+        }
+        navList[index].choiceFlag = true
+        categoryLists[index].classList.add("choice")
+        setIsLists(navList)
+        navigate(`/CourseList/category=${pash}`)
+        
+    }
     
     useEffect(()=>{
         const listsContent = document.getElementsByClassName(props.isHoverElementsName);
-        hoverEventFunction(listsContent, setIsShown, props.isText, Lists);
-        
+        hoverEventFunction(listsContent, setIsShown, props.isText, isLists);
         if(isShown){
             let categoryLists = document.getElementsByClassName("categoryLists__item");
-            for(let i=0;i<=Lists.length-1;i++){
-                if( Lists[i].choiceFlag ){
+            for(let i=0;i<=isLists.length-1;i++){
+                if( isLists[i].choiceFlag ){
                     categoryLists[i].classList.add("choice")
                 }
             }
             
         }
 
+        // console.log(SearchNavigateFunction().getTime())
     },[isShown])
     
     
     return(
         <div className={"listsContent"}>
-        
             <CategoryBtn isClassName={props.isClassName} isText={props.isText} /> 
             {
                 isShown &&(
                     <ul className={props.isItemsClassName}>
-                        {Lists.map(( list,index )=>(<li className={"categoryLists__item item"} key={index}>{list.text}</li>))}
+                        {isLists.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, isLists)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
                     </ul>
                 )
             }

@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom";
 import { ItemCard, Title } from './../../index';
 import React, { useEffect, useState } from 'react';
-// import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import './index.scss'
 
@@ -24,11 +24,11 @@ function ItemListArea(props) {
         <section className="itemConent">
             <Title isTitle={props.isTitle} isClassName={props.isTitleClassName}/>
             <form className="itemListArea" name="">
-            {Lists ? Lists.map(( List, index ) => (<ItemCard key={index} isId={List.id} isClassName="itemCard" isTitle={List.title} isCategory={List.category} isClass={List.class} isUrl={List.url} isAlt="サムネイル" isText={List.text} isAuthor={List.author} isPrice={List.price} />)) : ""}
-        </form>
+                {Lists ? Lists.map(( List, index ) => (<ItemCard key={index} isId={List.id} isClassName="itemCard" isTitle={List.title} isCategory={List.category} isClass={List.class} isUrl={List.url} isAlt="サムネイル" isText={List.text} isAuthor={List.author} isPrice={List.price} />)) : ""}
+            </form>
         </section>
     )
-   
+
 
     
 }

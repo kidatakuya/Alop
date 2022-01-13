@@ -9,7 +9,7 @@ import SearchIconUrl from "../../assets/images/search-icon.svg"
 function HomePage() {
     return (
         <>
-            <Header isTitle={"Home"} isLogo={LogoUrl} isSearchIcon={SearchIconUrl} />
+            <Header isLogo={LogoUrl} isSearchIcon={SearchIconUrl} />
             <HomeMain />
             <Footer isLogo={LogoAllUrl} />
         </>
