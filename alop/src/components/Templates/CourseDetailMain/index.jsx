@@ -4,55 +4,70 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.scss'
 
+
+export const CourseList = (props)=>{
+    return(
+        <ul>
+            {
+            props.isItems.map((item, index)=>(
+                <li key={index}><label htmlFor="">{item.text}</label><time>{item.time}</time></li>
+            ))
+            }
+        </ul>
+    )
+} 
+
 function CourseDetailMain(props) {
     let { courseId } = useParams({
 
     });
     const id = courseId - 1
     const [detail, setDetail] = useState([]);
-    useEffect(()=>{
 
-        const getState = async () =>{
-            axios.get(`http://localhost/Alop/testAPI/itemDetail.php/?courseId=${id}`)
-            .then(res => {
-                const data = res.data;
-                // data.contents = data.contents.replace(/\\n+/g, '<br>');
-                data.recommendedUser = data.recommendedUser.split(/\\n+/g);
-                data.contents = data.contents.split(/\\n+/g)
-                // console.log(data.contents)
-                setDetail(data);
-                
-                // console.log(detail.contents)
-            })
-        }
+    // コースデータ取得関数
+    const getState = async () =>{
+        axios.get(`http://localhost/Alop/testAPI/itemDetail.php/?courseId=${id}`)
+        .then(res => {
+            const data = res.data;
+            // data.contents = data.contents.replace(/\\n+/g, '<br>');
+            data.recommendedUser = data.recommendedUser.split(/\\n+/g);
+            data.contents = data.contents.split(/\\n+/g)
+            console.log(data.courseList)
+            setDetail(data);
+            
+            // console.log(detail.contents)
+        })
+    }
+
+    useEffect(()=>{
         getState()
 
-        const courseElement = document.getElementById("course")
-        const detailtCardElement = document.getElementsByClassName("detailtCard")
-        const courseElementCoordinateY = courseElement.getBoundingClientRect().top  
+        // const courseElement = document.getElementById("course")
+        // const detailtCardElement = document.getElementsByClassName("detailtCard")
+        // const courseElementCoordinateY = courseElement.getBoundingClientRect().top  
         
         // console.log(courseElement)
-        const scrollCardFunction = (styleChangeElements, stopElements, elementsCoordinateY) => {
-            let y = window.pageYOffset ;
-            window.addEventListener("scroll", ()=>{
-                y = window.pageYOffset;
+        // const scrollCardFunction = (styleChangeElements, stopElements, elementsCoordinateY) => {
+        //     let y = window.pageYOffset ;
+        //     window.addEventListener("scroll", ()=>{
+        //         y = window.pageYOffset;
                     
-                if(elementsCoordinateY <= y){
+        //         if(elementsCoordinateY <= y){
                 
-                    let elementsCoordinatAfterY = elementsCoordinateY + 90
-                    styleChangeElements.style.position="absolute";
-                    styleChangeElements.style.top = elementsCoordinatAfterY + "px";
-                }else{
-                    styleChangeElements.style.position=""
-                    styleChangeElements.style.top=""
+        //             let elementsCoordinatAfterY = elementsCoordinateY + 90
+        //             styleChangeElements.style.position="absolute";
+        //             styleChangeElements.style.top = elementsCoordinatAfterY + "px";
+        //         }else{
+        //             styleChangeElements.style.position=""
+        //             styleChangeElements.style.top=""
                     
-                }
-            })
-        }
-        scrollCardFunction( detailtCardElement[0], courseElement, courseElementCoordinateY)
+        //         }
+        //     })
+        // }
+        // scrollCardFunction( detailtCardElement[0], courseElement, courseElementCoordinateY)
         
         
-    },[])
+    },[]);
     return(
         <main className="courseDetailMain">
 
@@ -94,22 +109,12 @@ function CourseDetailMain(props) {
             </section>
             <section className="courseContents othersContents" id="course">
                 <ItemTitle isClassName={"title"} isTitle={"コース目次"} />
-                <div>
-                    <h4></h4>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4></h4>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+                { detail ? (detail.courseList || []).map((content, index)=>(
+                    <div key={index}>
+                        <h4>{content.title}</h4>
+                        <CourseList isItems={content.items} />
+                    </div>))
+                    :""}
             </section>
             <section className="courseContents othersContents">
                 <ItemTitle isClassName={"title"} isTitle={"このコースの作成会社"} />

@@ -65,8 +65,8 @@ function SearchContent(props){
     return(
         <div className="searchContent">
             <SearchArea isUrl={props.isUrl} />
-            <CategoryItemList isLists={categoryLists} isClassName={"categoryNavItem categoryHoverEvent"} isText={"カテゴリー"} isHoverElementsName={"categoryHoverEvent"} isItemsClassName={"categoryLists categoryWarp categoryHoverEvent"} />
-            <CategoryItemList isLists={classLists} isClassName={"categoryNavItem classHoverEvent"} isText={"クラス"} isHoverElementsName={"classHoverEvent"} isItemsClassName={"categoryLists classWarp classHoverEvent"} />
+            <CategoryItemList isLists={categoryLists} isClassName={"categoryNavItem categoryHoverEvent"} isText={"カテゴリー"} isHoverElementsName={"categoryHoverEvent"} isItemsClassName={"categoryLists categoryWarp categoryHoverEvent"} isCheckClassName={"categoryChoice"} />
+            <CategoryItemList isLists={classLists} isClassName={"categoryNavItem classHoverEvent"} isText={"クラス"} isHoverElementsName={"classHoverEvent"} isItemsClassName={"categoryLists classWarp classHoverEvent"} isCheckClassName={"classChoice"} />
 
         </div>
     )
