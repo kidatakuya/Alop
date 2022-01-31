@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 import { ItemCard, Title } from './../../index';
 import React, { useEffect, useState } from 'react';
+import {getState} from '../../Functions/submit'
 // import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import './index.scss'
@@ -10,14 +11,7 @@ function ItemListArea(props) {
     const [Lists, setLists] = useState([]);
     
     useEffect(()=>{
-        const getState = (seaWordrch) => {
-            axios.get(`http://localhost/Alop/testAPI/newItemList.php`)
-            .then(res => {
-                const data = res.data;
-                setLists(data);     
-            })
-        }
-        getState();
+        getState('test', setLists);
     
     },[]);
     return(

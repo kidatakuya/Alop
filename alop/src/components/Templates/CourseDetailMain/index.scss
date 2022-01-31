@@ -32,8 +32,25 @@
     .firstContents{
         height: 400px;
         padding: 56px 0;
+        .categoryLabel{
+            background-color: white;
+            &:first-of-type{
+                margin-right: 16px;
+            }
+        }
+        h2{
+            margin-top: 24px;
+        }
+
         .innerAuthorTimeWarp{
             display: flex;
+            margin-top: 16px;
+            p{
+                margin-right: 40px;
+            }
+        }
+        .mainText{
+            margin-top: 36px;
         }
         
 
@@ -50,6 +67,50 @@
             font-size: 18px;
             color: #2C2C2C;
         }
+        .subTitle{
+            padding: 23px 0 23px 72px;
+            background-color: #EBDCE2;
+            border: solid 1px #BCBCBC;
+            font-size: 18px;
+        }
+        .courseListWarp{
+            width: 100%;
+        
+            &__item{
+                display: grid;
+                grid-template-columns: 72px 1fr 100px;
+                padding: 21px 0;
+                font-size: 14px;
+                span{
+                    text-align: center;
+                    color: #B21B55;
+                }
+                time{
+                    color: #BCBCBC;
+                }
+            }
+        }
+
+        .authorInformation{
+            padding: 36px 16px;
+            border: solid 1px #BCBCBC;
+            display: flex;
+            &__imgWarp{
+                width: 117px;
+                height: 117px;
+                background-color: #555555;
+                border-radius: 50%;
+            }
+            &__textWarp{
+                padding-left: 38px;
+                .name{
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 16px 0;
+                }
+            }
+        }
+
     }
 }
 

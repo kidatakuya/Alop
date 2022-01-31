@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { CategoryWarp, Title, Price , Time, MainText, ItemTitle, Thumbnail, Author} from './../../index';
+import { CategoryWarp, Title, Price , Time, MainText, ItemTitle, Thumbnail, Author, ItemListArea} from './../../index';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.scss'
@@ -7,10 +7,10 @@ import './index.scss'
 
 export const CourseList = (props)=>{
     return(
-        <ul>
+        <ul className={"courseListWarp"}>
             {
             props.isItems.map((item, index)=>(
-                <li key={index}><label htmlFor="">{item.text}</label><time>{item.time}</time></li>
+                <li className={"courseListWarp__item"} key={index}><span>0{index+1}</span><label htmlFor="">{item.text}</label><time className={"time"}>{item.time}</time></li>
             ))
             }
         </ul>
@@ -88,7 +88,7 @@ function CourseDetailMain(props) {
                     {detail ? <CategoryWarp isClassNameWarp={""} isClassNameCategory={"categoryLabel category"} isClassNameClass={"categoryLabel class"} isClass={detail.class} isCategory={detail.category} /> :""}
                     {detail ? <Title isTitle={detail.title} />:""}
                     {detail ? <div className={"innerAuthorTimeWarp"}><Author isClassName={""} isAuthor={detail.author} /><Time isTime={detail.courseCreationEnd}/></div>:""}
-                    {detail ? <MainText isText={detail.overview} />:""}
+                    {detail ? <MainText isClassName={"mainText"} isText={detail.overview} />:""}
                 </div>
             </section>
             
@@ -111,19 +111,25 @@ function CourseDetailMain(props) {
                 <ItemTitle isClassName={"title"} isTitle={"コース目次"} />
                 { detail ? (detail.courseList || []).map((content, index)=>(
                     <div key={index}>
-                        <h4>{content.title}</h4>
+                        <h4 className={"subTitle"}>{content.title}</h4>
                         <CourseList isItems={content.items} />
                     </div>))
                     :""}
             </section>
             <section className="courseContents othersContents">
                 <ItemTitle isClassName={"title"} isTitle={"このコースの作成会社"} />
-                <div>
-                    <video src=""></video>
+                <div className="authorInformation">
+                    <div className="authorInformation__imgWarp">
+                        <img src="" alt="" />
+                    </div>
+                    <div className={"authorInformation__textWarp"}>
+                        <p className="name">{detail.author}</p>
+                        <p className="profile">{detail.author}</p>
+                    </div>
                 </div>
             </section>
             <section>
-                
+                <ItemListArea isTitle="関連する動画" isTitleClassName="itemListTitle"/>
             </section>
         </main>
     )

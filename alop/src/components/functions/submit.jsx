@@ -1,4 +1,4 @@
-
+import axios from "axios";
 
 export const SubmitFunction = ( data ) => {
     // const FD = new FormData
@@ -9,4 +9,13 @@ export const SubmitFunction = ( data ) => {
     
     
 };
+
+
+export const getState = (seaWordrch, setDataList) => {
+    axios.get(`http://localhost/Alop/testAPI/newItemList.php`)
+    .then(res => {
+        const data = res.data;
+        setDataList(data);     
+    })
+}
 

@@ -47,6 +47,7 @@ export { default as ErrorPage } from './Pages/ErrorPage'
 // templates
 export { default as HomeMain } from './Templates/HomeMain'
 export { default as CourseDetailMain } from './Templates/CourseDetailMain'
+export { default as CourseListMain } from './Templates/CourseListMain'
 
 
 

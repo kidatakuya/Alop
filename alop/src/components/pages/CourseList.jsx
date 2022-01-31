@@ -1,4 +1,4 @@
-import { DefaultBtn, Header, Footer, CourseDetailMain    } from '../index';
+import { DefaultBtn, Header, Footer, CourseListMain } from '../index';
 import { useParams } from 'react-router-dom';
 import LogoUrl from "../../assets/images/logo.svg"
 import LogoAllUrl from "../../assets/images/logo-all.svg"
@@ -8,8 +8,7 @@ function CourseList(props) {
     return (
         <>
             <Header isTitle={"MyPage"} isLogo={LogoUrl} isSearchIcon={SearchIconUrl} />
-            <h1>CourseList</h1>
-            
+            <CourseListMain />
             <Footer isLogo={LogoAllUrl} />
         </>
     );
