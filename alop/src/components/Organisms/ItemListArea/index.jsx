@@ -3,7 +3,7 @@ import { ItemCard, Title } from './../../index';
 import React, { useEffect, useState } from 'react';
 import {getState} from '../../Functions/submit'
 // import { useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios';
+// import axios from 'axios';
 import './index.scss'
 
 

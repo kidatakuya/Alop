@@ -1,63 +1,12 @@
 import { useState } from 'react';
 import { SearchArea, CategoryItemList } from '../../index';
+import { useSelector } from "react-redux";
 import './index.scss'
 
 function SearchContent(props){
+    const [classLists, setClassLists] = useState(useSelector((state) => state.classLists))
+    const [categoryLists, setCategoryLists] = useState(useSelector((state) => state.categoryLists))
 
-    const classLists = [
-        {
-            text: "すべて",
-            choiceFlag: true
-        },
-        {
-            text: "初級",
-            choiceFlag: false
-        },
-        {
-            text: "中級",
-            choiceFlag: false
-        },
-        {
-            text: "上級",
-            choiceFlag: false
-        },
-        {
-            text: "フィードバック",
-            choiceFlag: false
-        },
-
-    ]
-    const categoryLists = [
-        {
-            text: "すべて",
-            choiceFlag: true
-        },
-        {
-            text: "原画マン",
-            choiceFlag: false
-        },
-        {
-            text: "動画マン",
-            choiceFlag: false
-        },
-        {
-            text: "CG",
-            choiceFlag: false
-        },
-        {
-            text: "色彩",
-            choiceFlag: false
-        },
-        {
-            text: "背景",
-            choiceFlag: false
-        },
-        {
-            text: "キャラクター",
-            choiceFlag: false
-        },
-
-    ]
 
     
 
@@ -67,7 +16,6 @@ function SearchContent(props){
             <SearchArea isUrl={props.isUrl} />
             <CategoryItemList isLists={categoryLists} isClassName={"categoryNavItem categoryHoverEvent"} isText={"カテゴリー"} isHoverElementsName={"categoryHoverEvent"} isItemsClassName={"categoryLists categoryWarp categoryHoverEvent"} isCheckClassName={"categoryChoice"} />
             <CategoryItemList isLists={classLists} isClassName={"categoryNavItem classHoverEvent"} isText={"クラス"} isHoverElementsName={"classHoverEvent"} isItemsClassName={"categoryLists classWarp classHoverEvent"} isCheckClassName={"classChoice"} />
-
         </div>
     )
 }

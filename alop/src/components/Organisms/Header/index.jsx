@@ -1,13 +1,15 @@
 // import { Link } from "react-router-dom";
-import { SearchContent, Logo, HeaderNav } from './../../index';
+// import { SearchContent, Logo, HeaderNav } from './../../index';
+import { useSelector } from "react-redux";
 import './index.scss'
 
-function Header(props) {
+
+function Header({children}) {
+    const classLists = useSelector((state) => state.classLists);
+
     return(
         <header className="header">
-            <Logo isUrl={props.isLogo} isAlt={"aaa"}/>
-            <SearchContent isUrl={props.isSearchIcon} />
-            <HeaderNav />
+            {children}
         </header>
     )
 }
