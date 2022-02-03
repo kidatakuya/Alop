@@ -1,5 +1,120 @@
 .courseDetailMain{
     position: relative;
+
+
+    .modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        color: #555555;
+        &__firstContent{
+            background-color: white;
+            width: 485px;
+            height: 500px;
+            padding: 40px 64px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            h3{
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .description{
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 64px;
+            }
+            .priceWarp{
+                font-size: 18px;
+                text-align: center;
+                width: 250px;
+                margin: 0 auto;
+                border-bottom: 1px solid #BCBCBC;
+                span{
+                    font-size: 40px;
+                    padding-left: 32px;
+                }
+                margin-bottom: 18px;
+
+            }
+            .creditText{
+                margin-bottom: 68px;
+                color: #B21B55;
+            }
+            button{
+                display: block;
+                width: 100%;
+                border-radius: 4px;
+                padding: 13px;
+                font-size: 14px;
+                font-weight: bold;
+                &:nth-of-type(1){
+                    background-color: #B21B55;
+                    color: white;
+                    margin-bottom: 16px;
+                }
+                &:nth-of-type(2){
+                    background-color: white;
+                    border: 1px solid #BCBCBC;
+
+                }
+            }
+        }
+        &__secondContent{
+            background-color: white;
+            width: 485px;
+            height: 358px;
+            padding: 40px 64px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            h3{
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .description{
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 52px;
+            }
+            
+            button{
+                display: block;
+                width: 100%;
+                border-radius: 4px;
+                padding: 13px;
+                font-size: 14px;
+                font-weight: bold;
+                &:nth-of-type(1){
+                    background-color: #B21B55;
+                    color: white;
+                    margin-bottom: 16px;
+                }
+                &:nth-of-type(2){
+                    background-color: white;
+                    border: 1px solid #BCBCBC;
+
+                }
+            }
+
+        }
+    }
+
+
+
+
     .detailtCard{
         position: fixed;
         top: 108px;

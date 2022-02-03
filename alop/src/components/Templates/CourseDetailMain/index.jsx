@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 import { CategoryWarp, Title, Price , Time, MainText, ItemTitle, Thumbnail, Author, ItemListArea, IconBtn} from './../../index';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -21,9 +21,12 @@ function CourseDetailMain(props) {
     let { courseId } = useParams({
 
     });
+    const navigate = useNavigate();
     const id = courseId - 1
     const [detail, setDetail] = useState([]);
 
+    const [purchaseFlag, setPurchaseFlag] = useState(false)
+    const [switchFlag, setSwitchFlag] = useState(false)
     // コースデータ取得関数
     const getState = async () =>{
         axios.get(`http://localhost/Alop/testAPI/itemDetail.php/?courseId=${id}`)
@@ -70,7 +73,33 @@ function CourseDetailMain(props) {
     },[]);
     return(
         <main className="courseDetailMain">
+            {purchaseFlag ?
+                <section className="modal">
+                    {switchFlag ?
+                    <div className="modal__secondContent">
+                        <h3>購入完了</h3>
+                        <p className="description">
+                            購入が完了いたしました。<br />
+                            引き続き本サービスをお楽しみください。
+                            </p>
+                        <button onClick={()=>navigate("/")}>購入した動画を視聴する</button>
+                        <button onClick={()=>navigate("/")}>ホームへ戻る</button>
+                    </div>
+                    :
+                    <div className="modal__firstContent">
+                        <h3>購入内容確認</h3>
+                        <p className="description">購入を確定してもよろしいでしょうか？</p>
+                        <p className="priceWarp">合計<span>¥{detail.price}</span></p>
+                        <p className="creditText">クレジットの確認もしくは変更する場合はこちら</p>
+                        <button onClick={()=>setSwitchFlag(true)}>購入する</button>
+                        <button onClick={()=>setPurchaseFlag(false)}>キャンセルする</button>
+                    </div>
+                    }
+                    
+                </section>
 
+                :""}
+                
             <section className="detailtCard">
                 <Thumbnail isUrl={detail.url} isAlt={""}/>
                 <div className={"informationTextWarp"}>
@@ -78,7 +107,7 @@ function CourseDetailMain(props) {
                     < ItemTitle isClassName={"itemTitle"} isTitle={detail.title} />
                     <Author isClassName={"author"} isAuthor={detail.author} />
                     <Price isClassName={"price"} isPrice={detail.price}/>
-                    <button className="purchaseBtn">今すぐ購入する</button>
+                    <button className="purchaseBtn" onClick={()=>setPurchaseFlag(true)}>今すぐ購入する</button>
                     <p className="supplement">安心の３０日間返金保証</p>
                     <div className="BtnWarp">
                         <IconBtn>
