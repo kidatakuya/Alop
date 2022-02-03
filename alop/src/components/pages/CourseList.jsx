@@ -1,5 +1,5 @@
 import { Header, Footer, CourseListMain,SearchContent, Logo, HeaderNav,CategoryBtn,ItemListArea } from '../index';
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import {SearchNavigateFunction} from '../Functions/submit'
 import { hoverEventFunction } from '../Functions/HoverEvent'
@@ -10,12 +10,15 @@ import { useSelector } from "react-redux";
 
 
 
+
 function CourseList(props) {
     let { courseId } = useParams();
     const { categoryId } = useParams();
     const [isShown, setIsShown] = useState(false);
     const [classItems, setClassItems] = useState(useSelector((state) => state.classLists))
     const [CategoryItems, setCategoryItems] = useState(useSelector((state) => state.categoryLists))
+    const [loginFlag, setLoginFlag] = useState(useSelector((state) => state.userData.loginFlag))
+
 
     useEffect(()=>{
         // const listsContent = document.getElementsByClassName('categoryHoverEvent');
@@ -35,9 +38,14 @@ function CourseList(props) {
     return (
         <>
             <Header >
-                <Logo isUrl={LogoUrl} isAlt={"aaa"}/>
-                <SearchContent isUrl={SearchIconUrl} />
-                <HeaderNav />
+                {loginFlag 
+                    ? <HeaderNav />:
+                    <div>
+                        <Link className='SignBtn' to={"/Login"}>ログイン</Link>
+                        <Link className='SignBtn' to={'/Signup'}>新規登録</Link>
+                    </div>
+                }
+                
             </Header>
             <CourseListMain>
                 <div>

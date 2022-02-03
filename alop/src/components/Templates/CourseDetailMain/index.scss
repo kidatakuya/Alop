@@ -2,7 +2,7 @@
     position: relative;
     .detailtCard{
         position: fixed;
-        top: 168px;
+        top: 108px;
         right: 100px;
         z-index: 100;
         width: 364px;
@@ -11,10 +11,80 @@
         background-color: #fff;
         .informationTextWarp{
             padding: 16px;
+            .categoryLabel{
+                margin-right: 8px;
+            }
             .itemTitle{
+                height: auto;
                 padding: 0;
                 color: #555555;
+                font-size: 18px;
+                margin-bottom: 16px;
             }
+            .author{
+                display: block;
+                font-size: 14px;
+                color: #B7B7B7;
+                margin: 0;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 18px;
+                    height: 16px;
+                    margin-right: 8px;
+                    background-image: url(../../../assets/images/profile-icon-gray.svg);
+
+                }
+            }
+            .price{
+                font-size: 40px;
+                color: #555555;
+                font-weight: bold;
+                text-align: end;
+                margin-bottom: 24px;
+            }
+            .purchaseBtn{
+                display: block;
+                width: 218px;
+                font-size: 16px;
+                padding: 16px 0;
+                border-radius: 28px;
+                background-color: #B21B55;
+                color: white;
+                margin: 0 auto 16px;
+                font-weight: bold;
+            }
+            .supplement{
+                font-size: 12px;
+                color: #2C2C2C;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            .BtnWarp{
+                width: 100px;
+                height: 34px;
+                // padding: 8px 0;
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                .heartBtn,.cartBtn{
+                    display: block;
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                }
+                .heartBtn{
+                    display: block;
+                    background-color: #323661;
+                    &:nth-of-type(2){
+                        background-color: #B21B55;
+                    }
+                }
+                
+
+            }
+            
+
         }
 
     }

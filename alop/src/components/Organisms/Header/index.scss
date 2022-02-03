@@ -4,6 +4,14 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    .SignBtn{
+        display: inline-block;
+        height: 100%;
+        padding: 8px;
+        color: #BCBCBC;
+        font-size: 18px;
+        font-weight: bold;
+    }
     .listsContent{
         position: relative;
         z-index: 200;

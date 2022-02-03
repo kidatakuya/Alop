@@ -43,11 +43,25 @@ export { default as HomePage } from './Pages/Home'
 export { default as CourseDetail } from './Pages/CourseDetail'
 export { default as CourseList } from './Pages/CourseList'
 export { default as ErrorPage } from './Pages/ErrorPage'
+export { default as Course } from './Pages/Course'
+export { default as Credit } from './Pages/Credit'
+export { default as CreditCheck } from './Pages/CreditCheck'
+export { default as CreditCompleted } from './Pages/CreditCompleted'
+export { default as Login } from './Pages/Login'
+export { default as MyCourseList } from './Pages/MyCourseList'
+export { default as ShoppingList } from './Pages/ShoppingList'
+export { default as Signup } from './Pages/Signup'
+export { default as SignupComplete } from './Pages/SignupComplete'
+export { default as SignupConfirmation } from './Pages/SignupConfirmation'
+
 
 // templates
 export { default as HomeMain } from './Templates/HomeMain'
 export { default as CourseDetailMain } from './Templates/CourseDetailMain'
 export { default as CourseListMain } from './Templates/CourseListMain'
-
+export { default as LoginMain } from './Templates/LoginMain'
+export { default as SignupMain } from './Templates/SignupMain'
+export { default as SignupConfirmationMain } from './Templates/SignupConfirmationMain'
+export { default as SignupCompleteMain } from './Templates/SignupCompleteMain'
 
 

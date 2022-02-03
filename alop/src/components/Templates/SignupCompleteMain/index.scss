@@ -1,0 +1,37 @@
+.SignupCompleteMain{
+  &__content{
+    width: 80%;
+    padding: 182px 0 64px;
+    margin: 0 auto;
+    h2,p,a{
+      text-align: center;
+      color: #555555;
+    }
+    h2{
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+    p{
+      margin-bottom: 72px;
+      color: #313131;
+    }
+    a{
+      display: block;
+      width: 358px;
+      padding: 13px 0;
+      border-radius: 4px;
+      margin: 0 auto;
+      font-weight: bold;
+      &:nth-of-type(1){
+        background-color: #B21B55;
+        margin-bottom: 24px;
+        color: white;
+      }
+      &:nth-of-type(2){
+        background-color: white;
+        
+        border: 1px solid #BCBCBC;
+      }
+    }
+  }
+}
