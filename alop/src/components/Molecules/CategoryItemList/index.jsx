@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+// import { useSelector } from "react-redux";
 import { hoverEventFunction } from '../../Functions/HoverEvent'
 import { SearchNavigateFunction } from '../../Functions/submit'
 import { CategoryBtn } from '../../index';
@@ -12,8 +13,11 @@ function CategoryItemList(props){
     const [isLists, setIsLists] = useState(props.isLists)
     const itemList = isLists
     const [shown, setShown] = useState(false);
-    const [testData,setTestData] = useState("aaaa")
-    
+    // const [testData,setTestData] = useState("aaaa")
+    // const [selectClass,setSelectClass ] = useState(useSelector((state) => state.select.class))
+    // const [selectCategory,setSelectCategory ] = useState(useSelector((state) => state.select.category))
+
+
     useEffect(()=>{
         const listsContent = document.getElementsByClassName(props.isHoverElementsName);
         hoverEventFunction(listsContent, setShown, props.isText, isLists);
@@ -37,7 +41,7 @@ function CategoryItemList(props){
             {
                 shown &&(
                     <ul className={props.isItemsClassName}>
-                        {itemList.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, isLists, props.isCheckClassName, setIsLists, navigate)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
+                        {itemList.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, isLists, props.isCheckClassName, setIsLists, navigate, props.isSelect)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
                     </ul>
                 )
             }

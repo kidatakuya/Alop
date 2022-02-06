@@ -63,5 +63,5 @@ export { default as LoginMain } from './Templates/LoginMain'
 export { default as SignupMain } from './Templates/SignupMain'
 export { default as SignupConfirmationMain } from './Templates/SignupConfirmationMain'
 export { default as SignupCompleteMain } from './Templates/SignupCompleteMain'
-
+export { default as MyCourseListMain } from './Templates/MyCourseListMain'
 

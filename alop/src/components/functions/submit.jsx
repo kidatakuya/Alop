@@ -1,4 +1,6 @@
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { useState } from 'react';
 
 
 export const SubmitFunction = ( data ) => {
@@ -22,8 +24,8 @@ export const getState = (seaWordrch, setDataList) => {
 
 
 // 引数(検索カテゴリー,要素番号,カテゴリーリスト,クリックにつけるクラス,カテゴリーリスト更新関数)
-export const SearchNavigateFunction = (pash, index, isLists, checkClassName,setLists, navigate) => {
-    // let navigate = useNavigate();
+export const SearchNavigateFunction = (pash, index, isLists, checkClassName,setLists, navigate, setSelectItem) => {
+    
     let categoryLists = document.getElementsByClassName("categoryLists__item");
     let navList = isLists
     for(let i=0;i<=navList.length-1;i++){
@@ -33,6 +35,9 @@ export const SearchNavigateFunction = (pash, index, isLists, checkClassName,setL
         }
     }
     navList[index].choiceFlag = true
+    console.log(navList[index].text)
+    setSelectItem(navList[index].text)
+    
     categoryLists[index].classList.add(checkClassName)
     setLists(navList)
     navigate(`/CourseList/category=${pash}`)

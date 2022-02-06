@@ -242,6 +242,15 @@
     }
     .othersContents{
         padding: 60px 100px;
+        .videoWarp{
+            width: 100%;
+            video{
+                width: 100%;
+                source{
+                    width: 100%;
+                }
+            }
+        }
         .title{
             color: #B21B55;
             font-size: 26px;

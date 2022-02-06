@@ -1,6 +1,11 @@
 import { createStore } from "redux";
 
 const initialState = {
+    select:{
+        class:"すべて",
+        category:"aaa"
+
+    },
     classLists: [
         {
             text: "すべて",
@@ -56,7 +61,7 @@ const initialState = {
 
     ],
     userData:{
-        loginFlag:false,
+        loginFlag:true,
         name:"",
         emain:"",
         passward:"",

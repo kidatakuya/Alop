@@ -18,7 +18,9 @@ function CourseList(props) {
     const [classItems, setClassItems] = useState(useSelector((state) => state.classLists))
     const [CategoryItems, setCategoryItems] = useState(useSelector((state) => state.categoryLists))
     const [loginFlag, setLoginFlag] = useState(useSelector((state) => state.userData.loginFlag))
+    const [selectClass, setSelectClass] = useState(useSelector((state) => state.select.class))
 
+    const [selectCategory, setSelectCategory] = useState(useSelector((state) => state.select.category))
 
     useEffect(()=>{
         // const listsContent = document.getElementsByClassName('categoryHoverEvent');
@@ -50,15 +52,26 @@ function CourseList(props) {
             <CourseListMain>
                 <div>
                     <div>
-                    <CategoryBtn isClassName={'categoryNavItem'} isText={categoryId} /> 
-                    {
-                        isShown &&(
-                            <ul className={''}>
-                                {props.classLists.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, classItems, '', setClassItems)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
-                            </ul>
-                        )
-                    }
+                        <CategoryBtn isClassName={'categoryNavItem'} isText={selectClass} /> 
+                        {
+                            isShown &&(
+                                <ul className={''}>
+                                    {props.classLists.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, classItems, '', setClassItems)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
+                                </ul>
+                            )
+                        }
                     </div>
+                    <div>
+                        <CategoryBtn isClassName={'categoryNavItem'} isText={selectCategory} /> 
+                        {
+                            isShown &&(
+                                <ul className={''}>
+                                    {props.classLists.map(( list,index )=>(<li onClick={() => SearchNavigateFunction(list.text, index, classItems, '', setClassItems)} className={"categoryLists__item item"} key={index}>{list.text}</li>))}
+                                </ul>
+                            )
+                        }
+                    </div>
+                    <p></p>
                 </div>
                 <ItemListArea/>
             </CourseListMain>

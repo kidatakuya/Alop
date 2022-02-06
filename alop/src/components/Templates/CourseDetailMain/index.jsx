@@ -146,8 +146,11 @@ function CourseDetailMain(props) {
             </section>
             <section className="courseContents othersContents">
                 <ItemTitle isClassName={"title"} isTitle={"無料動画（一部公開）"} />
-                <div>
-                    <video src=""></video>
+                <div className="videoWarp">
+                    <video controls>
+                        <source src={detail.movie} type="video/webm"/>
+                        <source src={detail.movie} type="video/m"/>
+                    </video>
                 </div>
             </section>
             <section className="courseContents othersContents" id="course">
