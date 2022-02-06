@@ -53,6 +53,7 @@ export { default as ShoppingList } from './Pages/ShoppingList'
 export { default as Signup } from './Pages/Signup'
 export { default as SignupComplete } from './Pages/SignupComplete'
 export { default as SignupConfirmation } from './Pages/SignupConfirmation'
+export { default as FavoriteCourse } from './Pages/FavoriteCourse'
 
 
 // templates

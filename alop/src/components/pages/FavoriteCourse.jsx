@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { useSelector } from "react-redux";
 import { useState } from 'react';
 
-function ShoppingList(){
+function FavoriteCourse(){
   const [loginFlag, setLoginFlag] = useState(useSelector((state) => state.userData.loginFlag))
 
   return(
@@ -18,11 +18,10 @@ function ShoppingList(){
       }
     </Header>
     <main>
-      <h2>買い物かご</h2>
+      <h2>お気に入り</h2>
     </main>
     </>
   )
-
 }
 
-export default ShoppingList;
+export default FavoriteCourse

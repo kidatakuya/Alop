@@ -11,9 +11,9 @@ function HeaderNav() {
     const [favoriteHoverFlag, setFavoriteHoverFlag] = useState(false);
     const [myPageHoverFlag, setMyPageHoverFlag] = useState(false);
 
-    const pageNavegate=(pash, setFlag)=>{
-        setFlag(true)
-        navigate(pash)
+    const pageNavegate=(pash, setFlag, nav)=>{
+        // setFlag(true)
+        nav(pash)
     }
 
     useEffect(() => {
@@ -29,7 +29,7 @@ function HeaderNav() {
             <nav className="headerNav">
                 <ul>
                     <li>
-                        <button onClick={()=>pageNavegate("/MyCourseList",myCourseHoverFlag,setMyCourseHoverFlag)} type='button' to="/MyCourseList" className="iconWarp" onMouseEnter={()=>setMyCourseHoverFlag(!myCourseHoverFlag)} onMouseLeave={()=>setMyCourseHoverFlag(!myCourseHoverFlag)}>
+                        <button onClick={()=>pageNavegate("/MyCourseList",setMyCourseHoverFlag, navigate)} type='button' to="/MyCourseList" className="iconWarp" onMouseEnter={()=>setMyCourseHoverFlag(true)} onMouseLeave={()=>setMyCourseHoverFlag(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25.607" height="17.783" viewBox="0 0 25.607 17.783">
                                 <path id="Icon_materialLaptopChromebook" data-name="Icon materialLaptopChromebook" d="M23.473,20.191V4.5H2.134V20.191H0v2.092H25.607V20.191Zm-8.536,0H10.67V19.145h4.268Zm6.4-3.138H4.268V6.592H21.339Z" transform="translate(0 -4.5)" fill="#555"/>
                             </svg>
@@ -38,7 +38,7 @@ function HeaderNav() {
                     </li>
                     
                     <li>
-                        <button type='button' onClick={()=>pageNavegate("/ShoppingList",setShoppingHoverFlag)} to="/ShoppingList" className="iconWarp" onMouseEnter={()=>setShoppingHoverFlag(!shoppingHoverFlag)} onMouseLeave={()=>setShoppingHoverFlag(!shoppingHoverFlag)}>
+                        <button type='button' onClick={()=>pageNavegate("/ShoppingList",setShoppingHoverFlag,navigate)} className="iconWarp" onMouseEnter={()=>setShoppingHoverFlag(true)} onMouseLeave={()=>setShoppingHoverFlag(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="26.473" height="25.051" viewBox="0 0 26.473 25.051">
                                 <g id="Icon_featherShoppingCart" data-name="Icon featherShoppingCart" transform="translate(1.5 1.5)">
                                     <path id="パス_10" data-name="パス 10" d="M14.134,31.067A1.067,1.067,0,1,1,13.067,30,1.067,1.067,0,0,1,14.134,31.067Z" transform="translate(-4.531 -10.083)" fill="none" stroke="#555" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
@@ -51,7 +51,7 @@ function HeaderNav() {
                     </li>
                     
                     <li>
-                        <button to="/" className="iconWarp" onMouseEnter={()=>setFavoriteHoverFlag(!favoriteHoverFlag)} onMouseLeave={()=>setFavoriteHoverFlag(!favoriteHoverFlag)}>
+                        <button className="iconWarp" onClick={()=>pageNavegate("/FavoriteCourse",setFavoriteHoverFlag,navigate)} onMouseEnter={()=>setFavoriteHoverFlag(true)} onMouseLeave={()=>setFavoriteHoverFlag(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25.051" height="22.206" viewBox="0 0 25.051 22.206">
                                 <path id="Icon_feather-heart" data-name="Icon feather-heart" d="M22.674,6.2a5.808,5.808,0,0,0-8.207,0L13.348,7.312,12.23,6.2a5.8,5.8,0,1,0-8.207,8.2l1.118,1.117,8.207,8.2,8.207-8.2,1.118-1.117a5.788,5.788,0,0,0,0-8.2Z" transform="translate(-0.823 -2.997)" fill="none" stroke="#555" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
                             </svg>

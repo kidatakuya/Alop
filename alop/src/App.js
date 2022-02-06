@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { HomePage , CourseDetail, ErrorPage, CourseList, Course, Credit, CreditCheck, CreditCompleted, Login, MyCourseList, ShoppingList, Signup, SignupComplete, SignupConfirmation } from './components';
+import { HomePage , CourseDetail, ErrorPage, CourseList, Course, Credit, CreditCheck, CreditCompleted, Login, MyCourseList, ShoppingList, Signup, SignupComplete, SignupConfirmation, FavoriteCourse } from './components';
 import './ress.scss'
 import './App.css';
 import { useEffect } from "react";
@@ -28,6 +28,7 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/SignupComplete" element={<SignupComplete />} />
         <Route path="/SignupConfirmation" element={<SignupConfirmation />} />
+        <Route path="/FavoriteCourse" element={<FavoriteCourse />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       
